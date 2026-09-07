@@ -32,17 +32,17 @@ export default function Hero() {
 
       <div className="relative z-10 flex flex-col h-full">
         {/* Main content */}
-        <div className="flex-1 flex flex-col items-center justify-center px-4 py-10 text-center">
+        <div className="flex-1 flex flex-col items-center justify-center px-4 py-10 text-center text-outline">
           <motion.div
             initial={fadeBlur.initial}
             animate={fadeBlur.animate}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
             className="liquid-glass rounded-full flex items-center gap-2 px-1.5 py-1.5 pr-4"
           >
-            <span className="bg-white text-black text-xs font-medium px-3 py-1 rounded-full">
+            <span className="bg-white text-black text-sm font-medium px-3.5 py-1 rounded-full" style={{ textShadow: 'none' }}>
               ปีงบประมาณ 2569
             </span>
-            <span className="text-sm text-white/90 font-body">
+            <span className="text-base text-white/90 font-body">
               แบบข้อตกลงในการพัฒนางาน (PA) สำหรับตำแหน่งครู
             </span>
           </motion.div>
@@ -50,7 +50,7 @@ export default function Hero() {
           <div className="mt-6 max-w-4xl">
             <BlurText
               text="แบบข้อตกลงในการพัฒนางาน (PA)"
-              className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-heading italic text-white leading-[0.9] md:leading-[0.8] tracking-[-2px] md:tracking-[-4px]"
+              className="text-5xl sm:text-6xl md:text-8xl lg:text-[6.5rem] font-heading italic text-white leading-[0.95] md:leading-[0.85] tracking-[-2px] md:tracking-[-4px]"
             />
           </div>
 
@@ -58,7 +58,7 @@ export default function Hero() {
             initial={fadeBlur.initial}
             animate={fadeBlur.animate}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.8 }}
-            className="mt-4 text-sm md:text-base text-white max-w-2xl font-body font-light leading-tight"
+            className="mt-5 text-base md:text-xl text-white max-w-3xl font-body font-light leading-snug"
           >
             สำหรับข้าราชการครูและบุคลากรทางการศึกษา ตำแหน่งครู (ไม่มีวิทยฐานะ)
             <br className="hidden md:block" />
@@ -73,10 +73,10 @@ export default function Hero() {
           >
             <a
               href="#documents"
-              className="liquid-glass-strong flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-white"
+              className="liquid-glass-strong flex items-center gap-2 rounded-full px-6 py-3 text-base font-medium text-white"
             >
               ดูเอกสารทั้งหมด
-              <ArrowUpRight className="h-4 w-4 rotate-[135deg]" />
+              <ArrowUpRight className="h-5 w-5 rotate-[135deg]" />
             </a>
           </motion.div>
 
@@ -88,33 +88,33 @@ export default function Hero() {
           >
             <div className="liquid-glass rounded-[1.25rem] p-6 text-left flex-1">
               <div className="flex items-center gap-2 mb-4">
-                <UserIcon className="h-5 w-5 text-white/80" />
-                <span className="font-heading italic text-xl tracking-[-0.5px]">ข้อมูลผู้รับการประเมิน</span>
+                <UserIcon className="h-6 w-6 text-white/80" />
+                <span className="font-heading italic text-2xl md:text-3xl tracking-[-0.5px]">ข้อมูลผู้รับการประเมิน</span>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-sm font-body">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-base font-body">
                 <div>
-                  <div className="text-white/50 text-xs">ชื่อ-สกุล</div>
-                  <div className="text-white/90 mt-0.5">ว่าที่ร้อยตรี ศิริสวัสดิ์ พันน้อย</div>
+                  <div className="text-white/60 text-sm">ชื่อ-สกุล</div>
+                  <div className="text-white/95 mt-0.5 text-base md:text-lg">ว่าที่ร้อยตรี ศิริสวัสดิ์ พันน้อย</div>
                 </div>
                 <div>
-                  <div className="text-white/50 text-xs">ตำแหน่ง</div>
-                  <div className="text-white/90 mt-0.5">ครู คศ.1</div>
+                  <div className="text-white/60 text-sm">ตำแหน่ง</div>
+                  <div className="text-white/95 mt-0.5 text-base md:text-lg">ครู คศ.1</div>
                 </div>
                 <div>
-                  <div className="text-white/50 text-xs">กลุ่มสาระการเรียนรู้</div>
-                  <div className="text-white/90 mt-0.5">พลศึกษา โรงเรียนชุมชนบ้านปากชม</div>
+                  <div className="text-white/60 text-sm">กลุ่มสาระการเรียนรู้</div>
+                  <div className="text-white/95 mt-0.5 text-base md:text-lg">พลศึกษา โรงเรียนชุมชนบ้านปากชม</div>
                 </div>
                 <div>
-                  <div className="text-white/50 text-xs">อำเภอ / จังหวัด</div>
-                  <div className="text-white/90 mt-0.5">ปากชม / เลย</div>
+                  <div className="text-white/60 text-sm">อำเภอ / จังหวัด</div>
+                  <div className="text-white/95 mt-0.5 text-base md:text-lg">ปากชม / เลย</div>
                 </div>
                 <div>
-                  <div className="text-white/50 text-xs">สังกัด</div>
-                  <div className="text-white/90 mt-0.5">สำนักงานเขตพื้นที่การศึกษาประถมศึกษาเลย เขต 1</div>
+                  <div className="text-white/60 text-sm">สังกัด</div>
+                  <div className="text-white/95 mt-0.5 text-base md:text-lg">สำนักงานเขตพื้นที่การศึกษาประถมศึกษาเลย เขต 1</div>
                 </div>
                 <div>
-                  <div className="text-white/50 text-xs">สอนรายวิชา</div>
-                  <div className="text-white/90 mt-0.5">สุขศึกษาและพลศึกษา</div>
+                  <div className="text-white/60 text-sm">สอนรายวิชา</div>
+                  <div className="text-white/95 mt-0.5 text-base md:text-lg">สุขศึกษาและพลศึกษา</div>
                 </div>
               </div>
             </div>

@@ -92,18 +92,18 @@ function DocCard({ code, title, desc }: Item) {
   return (
     <div className="liquid-glass rounded-[1.1rem] p-4 flex flex-col">
       <div className="flex items-center gap-2">
-        <span className="liquid-glass rounded-full px-2.5 py-1 text-[11px] font-body text-white/90">
+        <span className="liquid-glass rounded-full px-3 py-1 text-sm font-body text-white/95">
           {code}
         </span>
       </div>
-      <h4 className="mt-3 text-sm md:text-[15px] font-body font-medium leading-snug min-h-[2.6em]">
+      <h4 className="mt-3 text-base md:text-lg font-body font-semibold leading-snug min-h-[2.6em]">
         {title}
       </h4>
-      <p className="mt-1 text-xs text-white/60 font-body leading-snug">
+      <p className="mt-1.5 text-sm md:text-base text-white/75 font-body leading-snug">
         {desc}
       </p>
 
-      <div className="mt-3 relative bg-white rounded-lg overflow-hidden" style={{ height: '26rem' }}>
+      <div className="mt-3 relative bg-white rounded-lg overflow-hidden" style={{ height: '26rem', textShadow: 'none' }}>
         {files.length === 0 ? (
           <div className="w-full h-full flex flex-col items-center justify-center gap-1.5 text-gray-400">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -111,7 +111,7 @@ function DocCard({ code, title, desc }: Item) {
               <circle cx="8.5" cy="9.5" r="1.5" />
               <path d="M21 16l-5-5-9 9" />
             </svg>
-            <span className="text-[11px] font-body">ไม่มีเอกสารแนบ</span>
+            <span className="text-sm font-body">ไม่มีเอกสารแนบ</span>
           </div>
         ) : (
           <>
@@ -193,7 +193,7 @@ function DocCard({ code, title, desc }: Item) {
           target="_blank"
           rel="noreferrer"
           download
-          className="mt-2 flex items-center gap-1.5 text-[11px] text-white/80 hover:text-white font-body truncate"
+          className="mt-2.5 flex items-center gap-1.5 text-sm text-white/90 hover:text-white font-body truncate"
           title={current.name}
         >
           <FileIcon type={current.type} />
@@ -218,9 +218,9 @@ export default function Capabilities() {
       </div>
       <ImageSlideshow images={SLIDESHOW_IMAGES} className="absolute inset-0 w-full h-full object-cover z-0" />
 
-      <div className="relative z-10 px-5 sm:px-8 md:px-16 lg:px-20 pt-16 md:pt-24 pb-24">
+      <div className="relative z-10 px-5 sm:px-8 md:px-16 lg:px-20 pt-16 md:pt-24 pb-24 text-outline">
         <div>
-          <h3 className="font-heading italic text-3xl md:text-4xl tracking-[-1px]">
+          <h3 className="font-heading italic text-4xl md:text-5xl lg:text-6xl tracking-[-1px]">
             ด้านที่ 1 ด้านการจัดการเรียนรู้
           </h3>
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -231,7 +231,7 @@ export default function Capabilities() {
         </div>
 
         <div className="mt-16">
-          <h3 className="font-heading italic text-3xl md:text-4xl tracking-[-1px]">
+          <h3 className="font-heading italic text-4xl md:text-5xl lg:text-6xl tracking-[-1px]">
             ด้านที่ 2 ด้านการส่งเสริมและสนับสนุนการจัดการเรียนรู้
           </h3>
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -242,7 +242,7 @@ export default function Capabilities() {
         </div>
 
         <div className="mt-16">
-          <h3 className="font-heading italic text-3xl md:text-4xl tracking-[-1px]">
+          <h3 className="font-heading italic text-4xl md:text-5xl lg:text-6xl tracking-[-1px]">
             ด้านที่ 3 การพัฒนาตนเองและวิชาชีพ
           </h3>
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -253,10 +253,10 @@ export default function Capabilities() {
         </div>
 
         <div className="mt-24 pt-8 border-t border-white/10 flex flex-col items-center gap-2 text-center">
-          <p className="text-xs text-white/60 font-body">
+          <p className="text-sm md:text-base text-white/70 font-body">
             โรงเรียนชุมชนบ้านปากชม สำนักงานเขตพื้นที่การศึกษาประถมศึกษาเลย เขต 1
           </p>
-          <p className="text-xs text-white/40 font-body">
+          <p className="text-sm md:text-base text-white/55 font-body">
             ประจำปีงบประมาณ พ.ศ. 2569 · ระหว่างวันที่ 1 ตุลาคม 2568 – 30 กันยายน 2569
           </p>
         </div>
