@@ -226,10 +226,21 @@ export default function Capabilities() {
 
       <div className="relative z-10 px-5 sm:px-8 md:px-16 lg:px-20 pt-16 md:pt-24 pb-24 text-outline">
         <div className="mb-16">
-          <h3 className="font-heading italic text-4xl md:text-5xl lg:text-6xl tracking-[-1px]">
-            เอกสารหลักการประเมิน
-          </h3>
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h3 className="font-heading italic text-3xl md:text-4xl lg:text-5xl tracking-[-1px] leading-tight">
+              แบบข้อตกลงในการพัฒนางาน (PA)
+            </h3>
+            <p className="mt-4 text-sm md:text-base text-white/85 font-body leading-relaxed">
+              สำหรับข้าราชการครูและบุคลากรทางการศึกษา ตำแหน่ง ครู (ยังไม่มีวิทยฐานะ)
+              <br />
+              โรงเรียนชุมชนบ้านปากชม สำนักงานพื้นที่การศึกษาประถมศึกษาเลย เขต 1
+              <br />
+              ประจำปีงบประมาณ พ.ศ. 2569
+              <br />
+              ระหว่างวันที่ 1 เดือน ตุลาคม พ.ศ. 2568 ถึงวันที่ 30 เดือน กันยายน พ.ศ. 2569
+            </p>
+          </div>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {MAIN_DOCS.map((item) => (
               <DocCard key={item.code} {...item} />
             ))}
