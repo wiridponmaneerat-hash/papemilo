@@ -4,6 +4,24 @@ import { withBase } from '../lib/asset';
 export type AttachmentFile = { name: string; url: string; type: 'image' | 'pdf' | 'docx' | 'zip' | 'other' };
 export type AttachmentGroup = { thumb: string | null; files: AttachmentFile[] };
 export const ATTACHMENTS: Record<string, AttachmentGroup> = {
+  'main1': {
+    thumb: null,
+    files: [
+      { name: 'บันทึกข้อตกลง PA.pdf', url: withBase('/attachments/main/files/%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B6%E0%B8%81%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%95%E0%B8%81%E0%B8%A5%E0%B8%87%20PA.pdf'), type: 'pdf' },
+    ],
+  },
+  'main2': {
+    thumb: null,
+    files: [
+      { name: 'ประเด็นท้าทาย.pdf', url: withBase('/attachments/main/files/%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%99%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%97%E0%B8%B2%E0%B8%A2.pdf'), type: 'pdf' },
+    ],
+  },
+  'main3': {
+    thumb: null,
+    files: [
+      { name: 'รายงานPA.pdf', url: withBase('/attachments/main/files/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99PA.pdf'), type: 'pdf' },
+    ],
+  },
   '1.1': {
     thumb: withBase('/attachments/1.1/thumb.jpg'),
     files: [
@@ -49,6 +67,7 @@ export const ATTACHMENTS: Record<string, AttachmentGroup> = {
   '1.6': {
     thumb: withBase('/attachments/1.6/thumb.jpg'),
     files: [
+      { name: 'วิจัยในชั้นเรียน.pdf', url: withBase('/attachments/1.6/files/%E0%B8%A7%E0%B8%B4%E0%B8%88%E0%B8%B1%E0%B8%A2%E0%B9%83%E0%B8%99%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99.pdf'), type: 'pdf' },
       { name: '9.แบบประเมินสมรรถนะสำคัญของผู้เรียน.pdf', url: withBase('/attachments/1.6/files/9.%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B8%A3%E0%B8%A3%E0%B8%96%E0%B8%99%E0%B8%B0%E0%B8%AA%E0%B8%B3%E0%B8%84%E0%B8%B1%E0%B8%8D%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99.pdf'), type: 'pdf' },
       { name: 'วิเคราะห์ผู้เรียนSDQ 69-1.pdf', url: withBase('/attachments/1.6/files/%E0%B8%A7%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%B0%E0%B8%AB%E0%B9%8C%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99SDQ%2069-1.pdf'), type: 'pdf' },
       { name: 'แบบประเมินคุณลักษณะอันพึงประสงค์.pdf', url: withBase('/attachments/1.6/files/%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B1%E0%B8%99%E0%B8%9E%E0%B8%B6%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%87%E0%B8%84%E0%B9%8C.pdf'), type: 'pdf' },

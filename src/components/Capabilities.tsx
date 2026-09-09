@@ -4,7 +4,13 @@ import { ATTACHMENTS } from '../data/attachments';
 import { ChevronLeft, ChevronRight } from './icons';
 import { withBase } from '../lib/asset';
 
-type Item = { code: string; title: string; desc: string };
+type Item = { code: string; title: string; desc: string; badge?: string };
+
+const MAIN_DOCS: Item[] = [
+  { code: 'main1', badge: '1', title: 'บันทึกข้อตกลงในการพัฒนางาน (PA)', desc: 'แบบข้อตกลงในการพัฒนางานระหว่างข้าราชการครูกับผู้อำนวยการสถานศึกษา ประจำปีงบประมาณ 2569' },
+  { code: 'main2', badge: '2', title: 'ประเด็นท้าทาย', desc: 'ประเด็นท้าทายในการพัฒนาผลลัพธ์การเรียนรู้ของผู้เรียน พร้อมวิธีดำเนินการและผลที่คาดหวัง' },
+  { code: 'main3', badge: '3', title: 'รายงานผลการปฏิบัติงาน (PA)', desc: 'รายงานผลการดำเนินงานตามข้อตกลงในการพัฒนางาน พร้อมหลักฐานประกอบการประเมิน' },
+];
 
 const SECTION1_1: Item[] = [
   { code: '1.1', title: 'สร้างและหรือพัฒนาหลักสูตร', desc: 'จัดทำและพัฒนาหลักสูตรสถานศึกษากลุ่มสาระสุขศึกษาและพลศึกษาให้สอดคล้องกับหลักสูตรแกนกลางและบริบทของผู้เรียน' },
@@ -66,7 +72,7 @@ function FileIcon({ type }: { type: string }) {
   );
 }
 
-function DocCard({ code, title, desc }: Item) {
+function DocCard({ code, title, desc, badge }: Item) {
   const group = ATTACHMENTS[code];
   const files = group?.files ?? [];
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -93,7 +99,7 @@ function DocCard({ code, title, desc }: Item) {
     <div className="liquid-glass rounded-[1.1rem] p-4 flex flex-col">
       <div className="flex items-center gap-2">
         <span className="liquid-glass rounded-full px-3 py-1 text-sm font-body text-white/95">
-          {code}
+          {badge ?? code}
         </span>
       </div>
       <h4 className="mt-3 text-base md:text-lg font-body font-semibold leading-snug min-h-[2.6em]">
@@ -219,6 +225,17 @@ export default function Capabilities() {
       <ImageSlideshow images={SLIDESHOW_IMAGES} className="absolute inset-0 w-full h-full object-cover z-0" />
 
       <div className="relative z-10 px-5 sm:px-8 md:px-16 lg:px-20 pt-16 md:pt-24 pb-24 text-outline">
+        <div className="mb-16">
+          <h3 className="font-heading italic text-4xl md:text-5xl lg:text-6xl tracking-[-1px]">
+            เอกสารหลักการประเมิน
+          </h3>
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {MAIN_DOCS.map((item) => (
+              <DocCard key={item.code} {...item} />
+            ))}
+          </div>
+        </div>
+
         <div>
           <h3 className="font-heading italic text-4xl md:text-5xl lg:text-6xl tracking-[-1px]">
             ด้านที่ 1 ด้านการจัดการเรียนรู้
